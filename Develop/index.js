@@ -9,7 +9,7 @@ const questions = [
     message: 'What is the title of your project?',
     validate: function (answer) {
       if (answer.length < 1) {
-          return console.log("You must enter a Title");
+          return console.log("You must enter a title");
       }
       return true;
   },
@@ -17,7 +17,7 @@ const questions = [
   {
     name: 'description',
     type: 'input',
-    message: 'Please provide the description for your project',
+    message: 'Please provide a description for your project.',
     validate: function (answer) {
       if (answer.length < 1) {
           return console.log("You must enter a description");
@@ -28,50 +28,52 @@ const questions = [
   {
     name: 'installation',
     type: 'input',
-    message: 'installation instructions',
+    message: 'Please enter your installation instructions. If not applicable, leave blank.',
   },
   {
     name: 'usage',
     type: 'input',
-    message: 'usage information',
+    message: 'Please enter your usage information. If not applicable, leave blank. information',
   },
   {
     name: 'contributing',
     type: 'input',
-    message: 'contribution guidelines',
+    message: 'Please enter your contributing guidelines. If not applicable, leave blank.',
   },
   {
     name: 'tests',
     type: 'input',
-    message: 'test instructions',
+    message: 'Please enter test instructions. If not applicable, leave blank. ',
   },
   {
     name: 'license',
     type: "list",
-    message: "license badges",
+    message: "Does this application have a license? If not, select 'None'",
     choices: ['MIT', 'GNU', 'Apache', 'BSD', 'ISC', "None"],
   },
   {
     name: 'github',
     type: 'input',
-    message: 'github username',
+    message: 'What is your GitHub username?',
+    validate: function (answer) {
+      if (answer.length < 1) {
+          return console.log("Please enter your GitHub username to continue");
+      }
+      return true;
+  },
   },
   {
     name: 'email',
     type: 'input',
-    message: 'email address',
+    message: 'What is your contact email address?',
+    validate: function (answer) {
+      if (answer.length < 1) {
+          return console.log("Please enter your email address to continue.");
+      }
+      return true;
+  },
   }
 ]
-
-function init() {
-  inquirer.prompt(questions)
-    .then(function answers(data) {
-      writeData(data)
-    })
-
-}
-
-
 
 function writeData(data) {
   fs.writeFile('README.md', generateMarkdown(data),
@@ -80,6 +82,13 @@ function writeData(data) {
   )
 }
 
+
+function init() {
+  inquirer.prompt(questions)
+    .then(function answers(data) {
+      writeData(data)
+    })
+}
 
 // Function call to initialize app
 init()
