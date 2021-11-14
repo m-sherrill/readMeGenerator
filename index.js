@@ -25,31 +25,27 @@ const questions = [
       }
       return true;
     },
-    default: "A terminal app using Inquirer. The user will be provided with a series of prompts to fill in information for their README file. Not all prompts are required, this application will leave off areas which were left blank during input.",
   },
   {
     name: 'installation',
     type: 'input',
     message: 'Please enter your installation instructions. If not applicable, leave blank.',
-    default: "This application requires node.js. Make sure this is installed on your computer first. Once that is set up, close this repository to your computer. Once you have it cloned, open the index.js file in your terminal and run ```npm install```. This will install inquirer to your folder. Once Inquirer is installed, run ```node index.js``` and enter in the prompts",
   },
   {
     name: 'usage',
     type: 'input',
     message: 'Please enter your usage information. If not applicable, leave blank.',
-    default: "There are no specific usage instructions for this application",
+    // default: "There are no specific usage instructions for this application",
   },
   {
     name: 'contributing',
     type: 'input',
     message: 'Please enter your contributing guidelines. If not applicable, leave blank.',
-    default: "To contribute to this project, fork the repo and send a pull request for any suggest changes. They will be reviewed as received."
   },
   {
     name: 'tests',
     type: 'input',
     message: 'Please enter test instructions. If not applicable, leave blank. ',
-    default: "There are no specific test instructions."
   },
   {
     name: 'license',
@@ -67,7 +63,6 @@ const questions = [
       }
       return true;
     },
-    default: "m-sherrill",
   },
   {
     name: 'email',
@@ -79,7 +74,6 @@ const questions = [
       }
       return true;
     },
-    default: "mo.sherrill@outlook.com"
   }
 ]
 
