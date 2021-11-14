@@ -13,7 +13,8 @@ A node.js app using Inquirer. The user will be provided with a series of prompts
 
 ## Usage
 
-- Once Inquirer is installed, run ```node index.js``` and answer the prompts.
+- Once Inquirer is installed, run ```node index.js``` in the terminal and answer the prompts.
+- All prompts will show in the terminal and need to be answered there. 
 - All prompts that are *not* required, are stated as the prompts are presented. 
 
 ## Demonstration Video
