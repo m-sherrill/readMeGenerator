@@ -13,7 +13,6 @@ const questions = [
       }
       return true;
     },
-    default: "Read Me Generator"
   },
   {
     name: 'description',
@@ -35,7 +34,6 @@ const questions = [
     name: 'usage',
     type: 'input',
     message: 'Please enter your usage information. If not applicable, leave blank.',
-    // default: "There are no specific usage instructions for this application",
   },
   {
     name: 'contributing',
@@ -78,7 +76,7 @@ const questions = [
 ]
 
 function writeData(data) {
-  fs.writeFile('README.md', generateMarkdown(data),
+  fs.writeFile('READMEsample.md', generateMarkdown(data),
     (err) =>
       err ? console.error(err) : console.log('Success!')
   )
