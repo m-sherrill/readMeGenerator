@@ -43,6 +43,11 @@ if (data.tests !== "") {
 `
 }
 
+if (data.license !== "None") {
+  markdown += `- [License](#license)
+`
+}
+
 markdown += `- [Questions](#questions)
 `
 

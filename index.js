@@ -36,7 +36,7 @@ const questions = [
   {
     name: 'usage',
     type: 'input',
-    message: 'Please enter your usage information. If not applicable, leave blank. information',
+    message: 'Please enter your usage information. If not applicable, leave blank.',
     default: "There are no specific usage instructions for this application",
   },
   {
