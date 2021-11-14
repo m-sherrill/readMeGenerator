@@ -76,7 +76,7 @@ const questions = [
 ]
 
 function writeData(data) {
-  fs.writeFile('READMEsample.md', generateMarkdown(data),
+  fs.writeFile('README.md', generateMarkdown(data),
     (err) =>
       err ? console.error(err) : console.log('Success!')
   )
