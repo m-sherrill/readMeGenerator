@@ -85,7 +85,7 @@ ${data.tests}
   if (data.license !== "None") {
     markdown += `## License
   
-${data.license}
+This app is licensed under ${data.license}.
       
 `
   }
